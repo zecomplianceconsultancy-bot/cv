@@ -3,107 +3,555 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zack ElMoussaoui — Confidential Profile</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Zack ElMoussaoui — Senior FEC & Compliance Consultant</title>
+<meta name="description" content="Senior Financial Economic Crime & Compliance Consultant — 17+ years across Rabobank, ING, FMO, LeasePlan/Ayvens.">
+<meta property="og:title" content="Zack ElMoussaoui — Senior FEC & Compliance Consultant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root {
+  --navy: #0B1D3A; --deep: #060F1F; --blue: #1A5276; --blue-l: #2471A3;
+  --gold: #C9A84C; --gold-l: #E8D9A0; --gold-dim: rgba(201,168,76,0.12);
+  --cream: #FAFAF7; --white: #FFFFFF; --off: #F6F4EE;
+  --text: #1C2833; --t2: #3A4550; --t3: #6C7A89; --t4: #9FAAB5;
+  --glass: rgba(11,29,58,0.78); --gb: rgba(201,168,76,0.1);
+  --r: 16px; --rs: 10px;
+  --fd: 'Playfair Display', Georgia, serif;
+  --fb: 'Outfit', -apple-system, sans-serif;
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#0B1D3A;--deep:#060F1F;--gold:#C9A84C;--gold-l:#E8D9A0;--fd:'Playfair Display',Georgia,serif;--fb:'Outfit',-apple-system,sans-serif}
-body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--deep);font-family:var(--fb);overflow:hidden;position:relative}
-canvas#bg{position:fixed;inset:0;z-index:0}
-.orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0}
-.orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 65%);top:-100px;right:-100px;animation:orb1 8s ease-in-out infinite}
-.orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(26,82,118,.08) 0%,transparent 65%);bottom:-50px;left:-50px;animation:orb2 10s ease-in-out infinite}
-.orb-3{width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 65%);top:40%;left:30%;animation:orb1 12s ease-in-out infinite reverse}
-@keyframes orb1{0%,100%{opacity:.4;transform:scale(1) translate(0,0)}50%{opacity:1;transform:scale(1.2) translate(20px,-15px)}}
-@keyframes orb2{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.8;transform:scale(1.15) translate(-10px,10px)}}
-.grid-bg{position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(201,168,76,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.015) 1px,transparent 1px);background-size:60px 60px}
-.login-card{position:relative;z-index:10;width:420px;max-width:92vw;padding:48px 40px;background:rgba(11,29,58,.65);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:1px solid rgba(201,168,76,.08);border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.02);animation:cardIn .8s cubic-bezier(.22,1,.36,1) forwards;opacity:0;transform:translateY(30px);transition:all .4s ease}
-@keyframes cardIn{to{opacity:1;transform:none}}
-.login-card.leaving{opacity:0!important;transform:scale(.95)!important}
-.mono{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b8963f);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;position:relative;box-shadow:0 8px 32px rgba(201,168,76,.2)}
-.mono::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(201,168,76,.15);animation:pulse 3s ease-in-out infinite}
-@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.15);opacity:0}}
-.mono span{font:800 28px/1 var(--fd);color:var(--deep)}
-.card-title{font:700 22px/1.2 var(--fd);color:#fff;text-align:center;margin-bottom:4px}
-.card-role{font:300 11px/1.5 var(--fb);color:var(--gold);text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
-.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.2),transparent);margin-bottom:28px}
-.input-group{position:relative;margin-bottom:20px}
-.input-group label{font:500 9px/1 var(--fb);color:rgba(255,255,255,.25);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:8px}
-.input-group input{width:100%;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.1);border-radius:12px;color:#fff;font:400 14px/1 var(--fb);outline:none;transition:all .3s}
-.input-group input::placeholder{color:rgba(255,255,255,.15);font-weight:300}
-.input-group input:focus{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.04);box-shadow:0 0 0 3px rgba(201,168,76,.06)}
-.input-group input.err{border-color:rgba(231,76,60,.4)!important}
-.btn-enter{width:100%;padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b8963f);color:var(--deep);font:600 12px/1 var(--fb);letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;margin-top:8px}
-.btn-enter::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 48%,transparent 56%);background-size:280%;animation:shine 4s ease infinite}
-@keyframes shine{0%{background-position:280%}100%{background-position:-280%}}
-.btn-enter:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.3)}
-.error-msg{font:400 11px/1 var(--fb);color:#e74c3c;text-align:center;margin-top:12px;height:16px}
-.card-footer{text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid rgba(201,168,76,.06)}
-.card-footer p{font:300 9px/1.4 var(--fb);color:rgba(255,255,255,.15);letter-spacing:1.5px;text-transform:uppercase}
-.lock{display:inline-flex;align-items:center;gap:6px;font:400 10px/1 var(--fb);color:rgba(201,168,76,.4);margin-bottom:8px}
-.lock svg{width:12px;height:12px;fill:currentColor}
-@media(max-width:480px){.login-card{padding:36px 24px}.card-title{font-size:20px}}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--cream);color:var(--text);font-family:var(--fb);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(201,168,76,.3)}
+
+/* ═══ PROGRESS ═══ */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-l),var(--gold));z-index:999;width:0%;box-shadow:0 0 14px rgba(201,168,76,.5)}
+
+/* ═══ NAV ═══ */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:500;display:flex;align-items:center;gap:3px;padding:7px 10px;background:var(--glass);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(201,168,76,.08);border-radius:50px;box-shadow:0 8px 36px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.04);opacity:0;pointer-events:none;transition:all .4s}
+.nav.vis{opacity:1;pointer-events:all}
+.nav a{font:500 10.5px/1 var(--fb);color:rgba(255,255,255,.35);text-decoration:none;padding:7px 12px;border-radius:24px;letter-spacing:.8px;text-transform:uppercase;transition:all .3s;white-space:nowrap}
+.nav a:hover{color:rgba(255,255,255,.75)}
+.nav a.active{color:var(--gold);background:rgba(201,168,76,.1)}
+.nav-dl{display:inline-flex;align-items:center;gap:5px;margin-left:6px;padding:7px 14px;border-radius:24px;border:1px solid rgba(201,168,76,.25);background:rgba(201,168,76,.08);color:var(--gold)!important;font:600 10px/1 var(--fb)!important;letter-spacing:.8px;cursor:pointer;transition:all .3s;text-decoration:none}
+.nav-dl:hover{background:var(--gold)!important;color:var(--navy)!important;transform:scale(1.04)}
+.nav-dl svg{width:11px;height:11px;fill:currentColor}
+
+/* ═══ HERO (DARK) ═══ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(165deg,#0d2240,var(--deep) 50%,#0a1628);overflow:hidden}
+#particles{position:absolute;inset:0;z-index:1}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.025) 1px,transparent 1px);background-size:55px 55px}
+.hero-glow{position:absolute;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);top:-120px;right:-100px;animation:gp 7s ease-in-out infinite}
+.hero-glow2{position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(26,82,118,.12) 0%,transparent 65%);bottom:-80px;left:-60px;animation:gp 9s ease-in-out infinite reverse}
+@keyframes gp{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+.hero-inner{position:relative;z-index:2;max-width:920px;padding:130px 50px 70px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid rgba(201,168,76,.18);border-radius:30px;background:rgba(201,168,76,.05);margin-bottom:26px;font:300 11px/1 var(--fb);color:var(--gold);letter-spacing:2.5px;text-transform:uppercase}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px rgba(74,222,128,.4);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-name{font:800 clamp(38px,7vw,70px)/1.05 var(--fd);margin-bottom:10px;background:linear-gradient(135deg,#fff 15%,var(--gold-l) 35%,#fff 55%,var(--gold-l) 75%,#fff 95%);background-size:400% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:400% center}}
+.hero-role{font:300 clamp(12px,1.7vw,16px)/1.5 var(--fb);color:var(--gold);letter-spacing:3.5px;text-transform:uppercase;margin-bottom:12px}
+.hero-type{font:300 15px/1.75 var(--fb);color:rgba(255,255,255,.38);margin-bottom:32px;max-width:640px}
+.hero-contact{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:32px}
+.hero-contact a{display:flex;align-items:center;gap:8px;font:400 13px/1 var(--fb);color:rgba(255,255,255,.4);text-decoration:none;transition:all .3s}
+.hero-contact a:hover{color:var(--gold-l);transform:translateX(3px)}
+.hero-contact svg{width:16px;height:16px;fill:var(--gold);opacity:.7;flex-shrink:0}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;background:linear-gradient(135deg,var(--gold),#b8963f);color:var(--navy);font:600 12px/1 var(--fb);letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.btn-gold::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 48%,transparent 56%);background-size:280%;animation:bs 4s ease infinite}
+@keyframes bs{0%{background-position:280%}100%{background-position:-280%}}
+.btn-gold:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 42px rgba(201,168,76,.35)}
+.btn-gold svg,.btn-ghost svg{width:14px;height:14px;fill:currentColor}
+.btn-gold span{position:relative;z-index:1}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:rgba(255,255,255,.55);font:500 12px/1 var(--fb);letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:all .3s;cursor:pointer}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.05)}
+
+/* ═══ METRICS (DARK) ═══ */
+.metrics{display:flex;background:var(--deep);border-top:1px solid rgba(201,168,76,.04);border-bottom:1px solid rgba(201,168,76,.04)}
+.met{flex:1;padding:28px 12px;text-align:center;border-right:1px solid rgba(201,168,76,.04);position:relative;overflow:hidden;transition:background .3s}
+.met:last-child{border-right:none}
+.met:hover{background:rgba(201,168,76,.02)}
+.met-ring{width:58px;height:58px;margin:0 auto 10px;position:relative}
+.met-ring svg{width:58px;height:58px;transform:rotate(-90deg)}
+.met-ring circle{fill:none;stroke-width:2.5}
+.met-ring .bg{stroke:rgba(201,168,76,.06)}
+.met-ring .fg{stroke:var(--gold);stroke-linecap:round;stroke-dasharray:163;stroke-dashoffset:163;transition:stroke-dashoffset 2s cubic-bezier(.22,1,.36,1)}
+.met-ring.anim .fg{stroke-dashoffset:var(--off)}
+.met-val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 16px/1 var(--fd);color:var(--gold)}
+.met-lbl{font:300 9.5px/1.3 var(--fb);color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.7px}
+
+/* ═══ PARALLAX DIVIDER ═══ */
+.divider{height:90px;position:relative;overflow:hidden}
+.divider.dark{background:var(--navy)}
+.divider.light{background:var(--cream)}
+.divider svg{position:absolute;width:100%;height:100%}
+
+/* ═══ SECTIONS ═══ */
+.sec{max-width:940px;margin:0 auto;padding:64px 44px}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:44px}
+.sec-num{font:300 11px/1 var(--fb);color:var(--gold);letter-spacing:2px;text-transform:uppercase;opacity:.5}
+.sec-title{font:700 clamp(19px,2.8vw,27px)/1 var(--fd);letter-spacing:1px}
+.sec-title.dark{color:var(--gold-l)}
+.sec-title.light{color:var(--navy)}
+.sec-line{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+/* ═══ PROFILE (LIGHT) ═══ */
+.profile-sec{background:var(--white);border-bottom:1px solid #F0EDE6}
+.ptxt{font:300 15.5px/1.88 var(--fb);color:var(--t2);margin-bottom:16px}
+.ptxt strong{color:var(--text);font-weight:600}
+.ptxt .brand{color:var(--blue);font-weight:600}
+
+/* ═══ ACHIEVEMENTS (DARK) ═══ */
+.ach-sec{background:linear-gradient(175deg,var(--navy),var(--deep) 60%);position:relative;overflow:hidden}
+.ach-sec::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.012) 1px,transparent 1px);background-size:45px 45px}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;position:relative;z-index:1}
+.ach-card{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.06);border-radius:var(--r);padding:28px 24px;cursor:default;transition:all .4s;will-change:transform;position:relative;overflow:hidden}
+.ach-card:hover{background:rgba(201,168,76,.04);border-color:rgba(201,168,76,.15);box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.ach-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.ach-card:hover::before{transform:scaleX(1)}
+.ach-card .spot{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,168,76,.08) 0%,transparent 55%)}
+.ach-card:hover .spot{opacity:1}
+/* Compliance Icons */
+.ach-ico{width:48px;height:48px;border-radius:var(--rs);background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.03));border:1px solid rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.ach-ico svg{width:24px;height:24px;fill:var(--gold);opacity:.85}
+.ach-t{font:600 14px/1.3 var(--fb);color:var(--gold-l);margin-bottom:8px}
+.ach-d{font:300 12.5px/1.65 var(--fb);color:rgba(255,255,255,.4)}
+
+/* ═══ EXPERIENCE (LIGHT) ═══ */
+.exp-sec{background:var(--white)}
+.tl{position:relative;padding-left:36px}
+.tl::before{content:'';position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),rgba(201,168,76,.06))}
+.tl-item{position:relative;padding:0 0 30px 32px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-32px;top:6px;width:20px;height:20px;border-radius:50%;background:var(--white);border:2px solid rgba(201,168,76,.35);transition:all .35s;z-index:2;cursor:pointer}
+.tl-dot::after{content:'';position:absolute;inset:4px;border-radius:50%;background:var(--gold);transform:scale(0);transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.tl-item:hover .tl-dot::after,.tl-item.open .tl-dot::after{transform:scale(1)}
+.tl-item:hover .tl-dot,.tl-item.open .tl-dot{border-color:var(--gold);box-shadow:0 0 0 5px rgba(201,168,76,.1)}
+.tl-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;cursor:pointer}
+.tl-title{font:600 15px/1.3 var(--fb);color:var(--text);transition:color .3s}
+.tl-item:hover .tl-title{color:var(--blue)}
+.tl-org{font:500 12.5px/1.4 var(--fb);color:var(--blue);margin-top:2px}
+.tl-loc{color:var(--t4);font-weight:400}
+.tl-period{font:600 10.5px/1 var(--fb);color:var(--gold);white-space:nowrap;background:var(--gold-dim);padding:6px 14px;border-radius:20px;border:1px solid rgba(201,168,76,.08);flex-shrink:0}
+.tl-ctx{font:300 12.5px/1.65 var(--fb);color:var(--t3);font-style:italic;margin:8px 0;padding-left:16px;border-left:2px solid var(--gold-l)}
+.tl-body{overflow:hidden;max-height:0;opacity:0;transition:max-height .6s cubic-bezier(.22,1,.36,1),opacity .5s}
+.tl-item.open .tl-body{max-height:3000px;opacity:1}
+.tl-toggle{font:400 10.5px/1 var(--fb);color:var(--gold);cursor:pointer;display:inline-flex;align-items:center;gap:5px;margin-top:8px;letter-spacing:.6px;text-transform:uppercase;padding:5px 14px;border-radius:20px;background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.08);transition:all .3s}
+.tl-toggle:hover{background:rgba(201,168,76,.1)}
+.tl-toggle svg{width:12px;height:12px;fill:currentColor;transition:transform .35s}
+.tl-item.open .tl-toggle svg{transform:rotate(180deg)}
+.tl-sub{display:flex;align-items:center;gap:8px;margin:14px 0 6px}
+.tl-sub .d{color:var(--gold);font-size:10px}
+.tl-sub .st{font:600 11px/1 var(--fb);color:var(--blue);text-transform:uppercase;letter-spacing:.6px}
+.tl-body ul{list-style:none;margin-top:4px}
+.tl-body li{font:300 13px/1.65 var(--fb);color:var(--t2);padding:3px 0 3px 20px;position:relative}
+.tl-body li::before{content:'';position:absolute;left:4px;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.4}
+.tl-body li strong{color:var(--text);font-weight:600}
+.tl-closing{font:italic 13px/1.6 var(--fb);color:var(--t3);padding:10px 0 0 16px;border-left:2px solid var(--gold-l);margin-top:10px}
+
+/* ═══ WORLD MAP STRIP (DARK) ═══ */
+.map-strip{background:var(--navy);padding:50px 20px;text-align:center;position:relative;overflow:hidden}
+.map-strip::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.01) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.01) 1px,transparent 1px);background-size:30px 30px}
+.map-title{font:300 11px/1 var(--fb);color:rgba(255,255,255,.2);letter-spacing:3px;text-transform:uppercase;margin-bottom:24px;position:relative;z-index:1}
+.map-wrap{position:relative;max-width:700px;margin:0 auto;z-index:1}
+.map-wrap svg{width:100%;height:auto;opacity:.15}
+.map-dots{position:absolute;inset:0}
+.map-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px rgba(201,168,76,.6);animation:pulse 2.5s ease-in-out infinite}
+.map-dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(201,168,76,.3);animation:ripple 2.5s ease-out infinite}
+@keyframes pulse{0%,100%{opacity:.7;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+@keyframes ripple{0%{transform:scale(1);opacity:.4}100%{transform:scale(2.5);opacity:0}}
+.map-stat{display:flex;justify-content:center;gap:50px;margin-top:28px;position:relative;z-index:1}
+.ms{text-align:center}
+.ms-val{font:700 clamp(24px,4vw,36px)/1 var(--fd);color:var(--gold);margin-bottom:4px}
+.ms-lbl{font:300 10px/1.3 var(--fb);color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:1px}
+
+/* ═══ CONSULTANCY (LIGHT w/ texture) ═══ */
+.con-sec{background:linear-gradient(180deg,var(--off),var(--white) 30%,var(--white) 70%,var(--off))}
+.con-card{margin-bottom:16px;padding:22px 26px;background:var(--white);border:1px solid rgba(0,0,0,.04);border-radius:var(--r);transition:all .35s;position:relative;overflow:hidden}
+.con-card:hover{box-shadow:0 12px 35px rgba(0,0,0,.05);transform:translateY(-2px)}
+.con-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.con-card:hover::before{transform:scaleX(1)}
+.con-title{font:600 13px/1 var(--fb);color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.con-title::before{content:'◆';color:var(--gold);font-size:8px}
+.con-card ul{list-style:none}
+.con-card li{font:300 13px/1.65 var(--fb);color:var(--t2);padding:3px 0 3px 20px;position:relative}
+.con-card li::before{content:'';position:absolute;left:4px;top:11px;width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.4}
+.con-card li strong{color:var(--text);font-weight:600}
+
+/* ═══ EXPERTISE (DARK) ═══ */
+.exp-dark{background:linear-gradient(175deg,var(--navy),var(--deep));position:relative;overflow:hidden}
+.exp-dark::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.01) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.01) 1px,transparent 1px);background-size:40px 40px}
+.radar-wrap{display:flex;gap:44px;align-items:center;flex-wrap:wrap;position:relative;z-index:1}
+.radar-chart{flex:0 0 300px;height:300px}
+.radar-labels{flex:1;min-width:280px}
+.radar-col{margin-bottom:26px}
+.radar-col h4{font:600 10.5px/1 var(--fb);color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid rgba(201,168,76,.1)}
+.radar-tag{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;margin:3px;border-radius:20px;border:1px solid rgba(201,168,76,.08);background:rgba(201,168,76,.02);font:300 11.5px/1 var(--fb);color:rgba(255,255,255,.45);transition:all .3s;cursor:default}
+.radar-tag:hover{background:rgba(201,168,76,.1);color:var(--gold-l);border-color:rgba(201,168,76,.25);transform:translateY(-2px);box-shadow:0 4px 14px rgba(201,168,76,.1)}
+.radar-tag::before{content:'◆';color:var(--gold);font-size:5px}
+
+/* ═══ EDUCATION (LIGHT) ═══ */
+.edu-sec{background:var(--white)}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.edu-card{background:var(--off);border:1px solid rgba(0,0,0,.04);border-radius:var(--r);padding:26px;transition:all .35s;position:relative;overflow:hidden}
+.edu-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height .5s}
+.edu-card:hover::before{height:100%}
+.edu-card:hover{box-shadow:0 10px 35px rgba(0,0,0,.05);transform:translateY(-3px)}
+.edu-card h4{font:600 10.5px/1 var(--fb);color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.edu-item{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #EAE6DC}
+.edu-item:last-child{border:none;margin:0;padding:0}
+.edu-item .nm{font:600 13px/1.3 var(--fb);color:var(--text)}
+.edu-item .dt{font:300 12px/1.4 var(--fb);color:var(--t3);margin-top:3px}
+
+/* ═══ CTA STRIP (DARK) ═══ */
+.cta-strip{background:linear-gradient(135deg,var(--navy),var(--deep));padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.05),transparent);transform:translate(-50%,-50%)}
+.cta-title{font:600 clamp(20px,3vw,28px)/1.2 var(--fd);color:#fff;margin-bottom:8px;position:relative;z-index:1}
+.cta-sub{font:300 14px/1.5 var(--fb);color:rgba(255,255,255,.35);margin-bottom:28px;position:relative;z-index:1}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+
+/* ═══ FOOTER (DARK) ═══ */
+.footer{text-align:center;padding:36px;background:var(--deep)}
+.footer-social{display:flex;justify-content:center;gap:12px;margin-bottom:16px}
+.footer-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);text-decoration:none;transition:all .35s}
+.footer-social a:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,.06);transform:translateY(-4px);box-shadow:0 6px 20px rgba(201,168,76,.12)}
+.footer-social svg{width:15px;height:15px;fill:currentColor}
+.footer p{font:300 9.5px/1 var(--fb);color:rgba(255,255,255,.14);letter-spacing:2px;text-transform:uppercase}
+
+/* ═══ BTT ═══ */
+.btt{position:fixed;bottom:26px;right:26px;z-index:100;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);border:1px solid rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(12px);transition:all .35s;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.btt.show{opacity:1;transform:none}
+.btt:hover{background:var(--gold);color:var(--navy)}
+.btt svg{width:18px;height:18px;fill:currentColor}
+
+/* ═══ REVEAL ═══ */
+.sr{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.sr.pend{opacity:0;transform:translateY(28px)}
+.sr.vis{opacity:1!important;transform:none!important}
+
+/* ═══ THEME TOGGLE ═══ */
+.theme-toggle{position:fixed;bottom:26px;left:26px;z-index:500;display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:30px;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(201,168,76,.1);cursor:pointer;transition:all .35s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.theme-toggle:hover{border-color:rgba(201,168,76,.3);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.2)}
+.theme-toggle svg{width:16px;height:16px;fill:var(--gold);transition:transform .4s}
+.theme-toggle span{font:500 9px/1 var(--fb);color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase}
+
+/* ═══ LIGHT THEME ═══ */
+body.light{background:#FEFDFB;color:#1C2833}
+body.light .hero{background:linear-gradient(165deg,#F8F6F0,#FFFDF8 50%,#F5F2EB)}
+body.light .hero-name{background:linear-gradient(135deg,var(--navy) 15%,var(--gold) 35%,var(--navy) 55%,var(--gold) 75%,var(--navy) 95%);background-size:400% auto;-webkit-background-clip:text;background-clip:text}
+body.light .hero-role{color:var(--gold)}
+body.light .hero-type{color:var(--t3)}
+body.light .hero-contact a{color:var(--t3)}
+body.light .hero-contact svg{fill:var(--gold)}
+body.light .hero-grid{background-image:linear-gradient(rgba(201,168,76,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.04) 1px,transparent 1px)}
+body.light .hero-glow{background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 65%)}
+body.light .hero-glow2{background:radial-gradient(circle,rgba(26,82,118,.05) 0%,transparent 65%)}
+body.light .hero-badge{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.15);color:var(--gold)}
+body.light .btn-gold{background:linear-gradient(135deg,var(--navy),#1a3a6e);color:#fff}
+body.light .btn-ghost{border-color:rgba(11,29,58,.15);color:var(--navy)}
+body.light .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+body.light .metrics{background:#FFFDF8;border-color:rgba(201,168,76,.08)}
+body.light .met{border-right-color:rgba(201,168,76,.08)}
+body.light .met:hover{background:rgba(201,168,76,.03)}
+body.light .met-ring .bg{stroke:rgba(201,168,76,.1)}
+body.light .met-val{color:var(--navy)}
+body.light .met-lbl{color:var(--t3)}
+body.light .ach-sec{background:linear-gradient(175deg,#FDFCFA,#F8F6F0 60%)}
+body.light .ach-sec::before{background-image:linear-gradient(rgba(201,168,76,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.025) 1px,transparent 1px)}
+body.light .ach-card{background:rgba(255,255,255,.7);border-color:rgba(201,168,76,.1)}
+body.light .ach-card:hover{background:rgba(255,255,255,.9);border-color:rgba(201,168,76,.25);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+body.light .ach-card::before{background:linear-gradient(90deg,var(--gold),var(--gold-l))}
+body.light .ach-t{color:var(--navy)}
+body.light .ach-d{color:var(--t2)}
+body.light .ach-ico{background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.03));border-color:rgba(201,168,76,.15)}
+body.light .sec-title.dark{color:var(--navy)}
+body.light .sec-num{color:var(--gold)!important}
+body.light .map-strip{background:#F8F6F0}
+body.light .map-strip::before{background-image:linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px)}
+body.light .map-title{color:var(--t3)}
+body.light .ms-val{color:var(--navy)}
+body.light .ms-lbl{color:var(--t3)}
+body.light .map-dot{background:var(--gold);box-shadow:0 0 8px rgba(201,168,76,.4)}
+body.light .exp-dark{background:linear-gradient(175deg,#FDFCFA,#F8F6F0)}
+body.light .exp-dark::before{background-image:linear-gradient(rgba(201,168,76,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.02) 1px,transparent 1px)}
+body.light .radar-col h4{color:var(--gold);border-bottom-color:rgba(201,168,76,.15)}
+body.light .radar-tag{border-color:rgba(201,168,76,.12);background:rgba(201,168,76,.04);color:var(--t2)}
+body.light .radar-tag:hover{background:rgba(201,168,76,.1);color:var(--navy);border-color:rgba(201,168,76,.3)}
+body.light .cta-strip{background:linear-gradient(135deg,#F8F6F0,#FFFDF8)}
+body.light .cta-strip::before{background:radial-gradient(circle,rgba(201,168,76,.04),transparent)}
+body.light .cta-title{color:var(--navy)}
+body.light .cta-sub{color:var(--t3)}
+body.light .footer{background:#F8F6F0}
+body.light .footer p{color:var(--t4)}
+body.light .footer-social a{border-color:rgba(201,168,76,.12);color:var(--t3)}
+body.light .footer-social a:hover{border-color:var(--gold);color:var(--gold)}
+body.light .nav{background:rgba(255,255,255,.85);border-color:rgba(201,168,76,.1);box-shadow:0 4px 24px rgba(0,0,0,.06)}
+body.light .nav a{color:var(--t3)}
+body.light .nav a:hover{color:var(--navy)}
+body.light .nav a.active{color:var(--gold);background:rgba(201,168,76,.08)}
+body.light .nav-dl{border-color:rgba(201,168,76,.2);background:rgba(201,168,76,.06);color:var(--gold)!important}
+body.light .btt{background:#fff;border-color:rgba(201,168,76,.15);color:var(--gold);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+body.light .btt:hover{background:var(--gold);color:#fff}
+body.light .theme-toggle{background:rgba(255,255,255,.85);border-color:rgba(201,168,76,.1);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+body.light .theme-toggle span{color:var(--t3)}
+body.light #particles{opacity:.3}
+body.light .progress{background:linear-gradient(90deg,var(--gold),var(--gold-l));box-shadow:0 0 10px rgba(201,168,76,.3)}
+
+/* ═══ PRINT ═══ */
+@media print{.nav,.btt,.progress,#particles,.hero-glow,.hero-glow2,.hero-grid,.hero-btns,.footer-social,.tl-toggle,.map-strip,.cta-strip,.theme-toggle{display:none!important}.hero{min-height:auto;padding:30px}.tl-body{max-height:none!important;opacity:1!important}.sec{padding:20px}body{background:#fff}@page{margin:1.5cm}}
+@media(max-width:768px){.hero-inner{padding:110px 22px 50px}.sec{padding:36px 20px}.hero-contact{flex-direction:column;gap:10px}.ach-grid{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}.radar-wrap{flex-direction:column}.radar-chart{flex:none;width:100%;max-width:280px;margin:0 auto}.nav{top:8px;padding:5px 6px}.nav a{font-size:9px;padding:5px 7px}.metrics{flex-wrap:wrap}.met{min-width:33%}.tl-head{flex-direction:column}.map-stat{gap:24px;flex-wrap:wrap}}
 </style>
 </head>
 <body>
-<canvas id="bg"></canvas>
-<div class="grid-bg"></div>
-<div class="orb orb-1"></div>
-<div class="orb orb-2"></div>
-<div class="orb orb-3"></div>
 
-<div class="login-card" id="card">
-  <div class="mono"><span>Z</span></div>
-  <h1 class="card-title">Zack ElMoussaoui</h1>
-  <p class="card-role">Confidential Executive Profile</p>
-  <div class="divider"></div>
-  <div class="input-group">
-    <label>Access Code</label>
-    <input type="password" id="code" placeholder="Enter access code" autocomplete="off" autofocus>
+<div class="progress" id="progressBar"></div>
+
+<nav class="nav" id="mainNav">
+  <a href="#top" class="active" data-s="top">Profile</a>
+  <a href="#achievements" data-s="achievements">Achievements</a>
+  <a href="#experience" data-s="experience">Experience</a>
+
+  <a href="#expertise" data-s="expertise">Expertise</a>
+  <a href="#education" data-s="education">Education</a>
+  <a href="Zack_ElMoussaoui_CV.pdf" download class="nav-dl"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>CV</a>
+</nav>
+
+<!-- ═══ HERO (DARK) ═══ -->
+<header class="hero" id="top">
+  <canvas id="particles"></canvas>
+  <div class="hero-grid"></div><div class="hero-glow"></div><div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span> Available for Consultancy</div>
+    <h1 class="hero-name">Zack ElMoussaoui</h1>
+    <p class="hero-role">Senior Financial Economic Crime & Compliance Consultant</p>
+    <p class="hero-type">Passionate about financial crime prevention. 17+ years delivering measurable impact across leading Dutch and international institutions. Bridging executive boards, senior management, and operational teams across 30+ countries.</p>
+    <div class="hero-contact">
+      <a href="mailto:info@compliancedevelopmentconsultancy.com"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>info@compliancedevelopmentconsultancy.com</a>
+      <a href="tel:+31634039890"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(+31) 634 0398 904</a>
+      <a href="https://www.linkedin.com/in/zack-e-a9a16717" target="_blank"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>LinkedIn</a>
+      <a><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>The Randstad, NL</a>
+    </div>
+    <div class="hero-btns">
+      <a href="Zack_ElMoussaoui_CV.pdf" download class="btn-gold"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg><span>Download CV</span></a>
+      <a href="mailto:info@compliancedevelopmentconsultancy.com" class="btn-ghost"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>Get in Touch</a>
+    </div>
   </div>
-  <button class="btn-enter" id="loginBtn">Access Profile</button>
-  <div class="error-msg" id="error"></div>
-  <div class="card-footer">
-    <div class="lock"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>Encrypted &amp; Confidential</div>
-    <p>Z.E. Compliance Development &amp; Consultancy</p>
-    <p style="margin-top:4px">The Randstad, Netherlands</p>
+</header>
+
+<!-- METRICS (DARK) -->
+<div class="metrics">
+  <div class="met"><div class="met-ring" data-pct="85"><svg viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="26"/><circle class="fg" cx="28" cy="28" r="26"/></svg><div class="met-val">17+</div></div><div class="met-lbl">Years Banking &<br>Compliance</div></div>
+
+  <div class="met"><div class="met-ring" data-pct="75"><svg viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="26"/><circle class="fg" cx="28" cy="28" r="26"/></svg><div class="met-val">5</div></div><div class="met-lbl">Major Financial<br>Institutions</div></div>
+  <div class="met"><div class="met-ring" data-pct="90"><svg viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="26"/><circle class="fg" cx="28" cy="28" r="26"/></svg><div class="met-val">AMLR</div></div><div class="met-lbl">EU Regulation<br>Transition Pioneer</div></div>
+  <div class="met"><div class="met-ring" data-pct="82"><svg viewBox="0 0 56 56"><circle class="bg" cx="28" cy="28" r="26"/><circle class="fg" cx="28" cy="28" r="26"/></svg><div class="met-val">L&D</div></div><div class="met-lbl">Regulator-Praised<br>Programmes</div></div>
+</div>
+
+<!-- PROFILE (WHITE) -->
+<section class="profile-sec" id="profileSection">
+  <div class="sec sr">
+    <p class="ptxt">Senior Financial Economic Crime (FEC) Specialist with <strong>17+ years</strong> of progressive experience across leading Dutch and international financial institutions — including Rabobank, ING, FMO, and LeasePlan/Ayvens (Société Générale Group). Passionate about what I do in the FEC sphere, I have excelled across multiple set-ups and consistently delivered measurable impact in financial crime prevention, regulatory compliance, and large-scale organizational transformation across <strong>30+ countries</strong>.</p>
+    <p class="ptxt">Experienced in bridging the gap between executive management and board level, senior management, and operational teams — delivering quarterly ExCo reporting on FCC items and ensuring alignment at every level. Proven track record in strategic framework design, global programme delivery, multi-jurisdictional compliance integration during high-profile M&A transactions, and the establishment of training programmes praised by Dutch regulators (DNB). Currently leading <span class="brand">Z.E. Compliance Development & Consultancy</span>, specializing in guiding Dutch financial institutions through the critical Wwft-to-AMLR transition.</p>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS (DARK with compliance icons) -->
+<section class="ach-sec" id="achievements">
+  <div class="sec sr">
+    <div class="sec-head"><span class="sec-num" style="color:rgba(255,255,255,.2)">01</span><h2 class="sec-title dark">Key Career Achievements</h2><div class="sec-line"></div></div>
+    <div class="ach-grid">
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div><div class="ach-t">Transaction Monitoring — Design to Execution</div><p class="ach-d">Designed the TM gap analysis framework at LeasePlan against EBA Guidelines, DNB requirements, and Wwft — together with the central LOD1 team. Currently executing the full design and setup of the Transaction Monitoring framework at Ayvens Bank — including policy and procedures, pre- and post-transaction monitoring, business rules and scenario design, threshold tuning, alert generation and handling, external and internal reporting, quality management, back-testing, testing framework, and test effectiveness plan.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div><div class="ach-t">Global Sanctions Integration — 30+ Countries</div><p class="ach-d">Single point of authority for complete sanctions integration during LeasePlan–ALD merger. Governance, policy, HR/client/supplier screening, regulatory watchtower — zero regulatory gaps.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div><div class="ach-t">L&D Programme — FMO Development Bank</div><p class="ach-d">Designed FMO's KYC Essentials curriculum from scratch — self-study, workshops, case-based learning. Recognised positively by DNB regulators.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><div class="ach-t">Helped Build KYC Dept — 5 to 125+ FTEs</div><p class="ach-d">From initial inception alongside KPMG through to senior advisor — scaling Rabobank's Wholesale KYC department from 5 to 125+ professionals.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31A7.98 7.98 0 0012 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg></div><div class="ach-t">Wwft-to-AMLR Transition Experience</div><p class="ach-d">Deep hands-on experience transitioning from national Wwft to the directly applicable EU AML Regulation (AMLR) for Dutch financial institutions.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div><div class="ach-t">M&A — Helped Create Ayvens Group</div><p class="ach-d">One of the key players facilitating the LeasePlan–ALD merger under Société Générale — directly contributing to the creation of Ayvens Group, the largest car leasing company in the world. Involved in all aspects of the compliance and FCC integration across the board: policy, sanctions, AML/CFT, transaction monitoring, screening, KYC/CDD, risk appetite, SIRA, 3LoD model, training, and regulatory alignment across 30+ countries.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div><div class="ach-t">Green House Programme & Training</div><p class="ach-d">Designed Rabobank Wholesale training framework. Assisted Hanze Hogeschool on Minors. Created Green House Programme moulding new joiners into high-achieving CDD analysts.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg></div><div class="ach-t">Global KYC Authority — ING CDD Pillar</div><p class="ach-d">Part of the CDD Pillar establishing Global KYC Authority at ING. Baseline standards and PEGA configurations across all countries.</p></div>
+      <div class="ach-card"><div class="spot"></div><div class="ach-ico"><svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg></div><div class="ach-t">French-to-Dutch Regulatory Translation</div><p class="ach-d">Leading adaptation of Société Générale standards to Dutch context — Sanctions, FCC, ABC, FATCA/CRS — mapping to Wwft and DNB guidance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORLD MAP STRIP (DARK) -->
+<div class="map-strip">
+  <div class="map-title">Global Compliance Footprint</div>
+  <div class="map-wrap">
+    <svg viewBox="0 0 800 400" fill="none"><path d="M156 130c3-8 12-14 18-20 8-7 14-16 24-20 5-2 11-2 16-4 6-3 10-8 16-11 4-2 9-2 13-4 7-4 12-10 19-14 3-2 7-2 10-4 5-3 8-8 13-10 9-3 19 0 28-2 4-1 7-4 11-5 9-2 18 1 27 0 6-1 11-4 17-4 7 0 14 2 21 3 4 1 9 0 13 2 5 2 9 6 14 8 3 1 7 1 10 3 5 3 8 8 13 11 3 2 7 3 10 5 4 3 6 8 10 11 3 2 7 4 9 7 3 4 4 9 7 13 2 3 6 4 7 7 2 4 1 10 3 14 1 3 4 5 5 8 1 5 0 10 1 15 0 3 2 6 2 9 0 6-2 12-3 18-1 4 0 8-1 12-2 6-5 11-8 16-2 4-5 7-7 11-3 5-4 11-8 15-2 3-6 5-8 8-4 4-6 9-10 12M420 95c4-3 9-4 14-6 7-3 13-8 20-10 4-1 9-1 13-3 6-3 10-8 16-11M280 180c-4 5-5 12-9 17-2 3-6 4-8 7-3 5-3 11-6 16-2 3-5 5-7 8" stroke="rgba(201,168,76,0.06)" stroke-width="1"/></svg>
+    <div class="map-dots">
+      <div class="map-dot" style="left:47%;top:28%;animation-delay:0s" title="Netherlands"></div>
+      <div class="map-dot" style="left:49%;top:32%;animation-delay:.4s" title="Belgium"></div>
+      <div class="map-dot" style="left:45%;top:34%;animation-delay:.8s" title="France"></div>
+      <div class="map-dot" style="left:51%;top:30%;animation-delay:1.2s" title="Germany"></div>
+      <div class="map-dot" style="left:53%;top:36%;animation-delay:.3s" title="Italy"></div>
+      <div class="map-dot" style="left:43%;top:28%;animation-delay:1.5s" title="UK"></div>
+      <div class="map-dot" style="left:55%;top:26%;animation-delay:.6s" title="Poland"></div>
+      <div class="map-dot" style="left:57%;top:33%;animation-delay:1s" title="Turkey"></div>
+      <div class="map-dot" style="left:62%;top:38%;animation-delay:.2s" title="Middle East"></div>
+      <div class="map-dot" style="left:68%;top:42%;animation-delay:1.8s" title="India"></div>
+      <div class="map-dot" style="left:78%;top:48%;animation-delay:.7s" title="SE Asia"></div>
+      <div class="map-dot" style="left:50%;top:55%;animation-delay:1.1s" title="Africa"></div>
+      <div class="map-dot" style="left:28%;top:42%;animation-delay:.5s" title="Brazil"></div>
+      <div class="map-dot" style="left:22%;top:32%;animation-delay:1.4s" title="US"></div>
+      <div class="map-dot" style="left:82%;top:52%;animation-delay:.9s" title="Australia"></div>
+    </div>
+  </div>
+  <div class="map-stat">
+    <div class="ms"><div class="ms-val" data-count="30">0</div><div class="ms-lbl">Countries</div></div>
+    <div class="ms"><div class="ms-val" data-count="5">0</div><div class="ms-lbl">Institutions</div></div>
+    <div class="ms"><div class="ms-val" data-count="17">0</div><div class="ms-lbl">Years</div></div>
+
   </div>
 </div>
 
+<!-- EXPERIENCE (WHITE) -->
+<section class="exp-sec" id="experience">
+  <div class="sec sr">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title light">Professional Experience</h2><div class="sec-line"></div></div>
+    <div class="tl">
+      <div class="tl-item open"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Project Manager / Senior Compliance Expert</div><div class="tl-org">Ayvens Bank (Société Générale Group) <span class="tl-loc">— Netherlands</span></div></div><span class="tl-period">Jan 2025 – Present</span></div><p class="tl-ctx">Leading end-to-end adaptation of SocGen group compliance standards to Dutch banking regulatory context. Spearheading the comprehensive redesign of the bank's Transaction Monitoring framework, managing audit remediation programmes, leading the FATCA/CRS implementation and remediation project, and preparing the bank for the EU AMLR transition. Reporting directly to the Ayvens Group Executive Board.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><div class="tl-sub"><span class="d">◆</span><span class="st">Transaction Monitoring — Full Redesign</span></div><ul><li><strong>TM Policy & Procedures:</strong> Authored the bank's Transaction Monitoring policy and procedural framework from the ground up — covering the full monitoring lifecycle from objectives and legal basis through governance, risk-based approach, and SIRA integration, to record retention and document management</li><li><strong>Pre- & Post-Transaction Monitoring:</strong> Designed and formalised both the pre-transaction and post-transaction monitoring processes, ensuring comprehensive coverage across payment flows, behavioural patterns, and client activity</li><li><strong>Business Rules & Scenario Design:</strong> Developed new and enhanced business rules with tailored detection scenarios aligned to client risk profiles, including threshold setting and tuning methodology, and integration of local legislative requirements</li><li><strong>Alert Generation & Handling:</strong> Redesigned the end-to-end alert generation and handling process — encompassing automated and manual alert generation, 1st line investigation procedures, 2nd line case review and escalation protocols, lead times, and backlog management</li><li><strong>External & Internal Reporting:</strong> Structured the external reporting framework (including FIU filing obligations) and internal reporting flows, incorporating tipping-off prohibitions, general transaction processing conditionality, and objective indicator reporting obligations</li><li><strong>Quality Management Framework:</strong> Established the TM quality management framework covering 1st/2nd line responsibilities, management information, TM process monitoring, back-testing, continuous improvement cycles, and remediation of internal audit findings</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Audit & Inspection Management</span></div><ul><li><strong>Audit Remediation Management:</strong> Serving as Project Manager for the bank's FEC audit programme — overseeing audit outcomes, coordinating remediation activities across stakeholders, and ensuring all audit findings are satisfactorily addressed and closed within agreed timelines</li><li><strong>Group Inspection (Inspection Générale):</strong> Managing and coordinating the bank's engagement with the Group Inspection Générale function — which operates on behalf of Group General Management (CEO level) and conducts independent strategic audit and advisory missions distinct from the internal audit function. Ensuring the bank's preparedness, documentation readiness, and timely follow-up on Inspection recommendations across all FEC domains</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">FATCA/CRS Remediation & Policy</span></div><ul><li><strong>FATCA/CRS Remediation Lead:</strong> Leading the FATCA/CRS remediation project for the bank, coordinating the identification and resolution of gaps in the existing client base and reporting processes</li><li><strong>FATCA/CRS Policy Rewrite:</strong> Contributed to the rewriting of the bank's FATCA/CRS policy framework, aligning procedures with current regulatory expectations and group standards</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Process Architecture & Regulatory Alignment</span></div><ul><li><strong>Process Redesign:</strong> Redesigned end-to-end compliance processes across sanctions screening, AML/CTF, CDD, transaction monitoring, and alert handling — mapping each process from initiation through investigation, escalation, and resolution to ensure operational efficiency and full regulatory traceability</li><li><strong>Alert Management:</strong> Established structured alert management workflows encompassing triage, prioritisation, investigation standards, escalation criteria, and management reporting on alert volumes, ageing, and outcomes</li><li><strong>Regulatory Translation:</strong> Complete translation of SocGen group standards — Sanctions, FCC, ABC, FATCA/CRS — to align with Wwft, Sanctiewet, and DNB supervisory expectations for the Dutch banking entity</li><li><strong>Gap Analysis & Roadmaps:</strong> Structured gap analyses as baseline for regulatory alignment, producing actionable roadmaps for remediation and enhancement across all compliance domains</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Executive Reporting & Governance</span></div><ul><li><strong>Executive Board Reporting:</strong> Reporting directly to the CRFO Management Board of Ayvens Bank on FEC programme status, audit remediation progress, TM framework implementation, and key risk indicators. Including periodic reporting directly to the Executive Management of Ayvens Group across all compliance domains</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">EU AMLR Transition</span></div><ul><li><strong>AMLR Readiness:</strong> Helping prepare the bank for the transition to the EU Anti-Money Laundering Regulation (AMLR) — supporting the group in establishing the Dutch regulatory structure for AMLR implementation, including the Wwft-to-AMLR comparative analysis, gap assessment, and transposition planning in conjunction with group-level compliance</li></ul></div></div>
+
+      <div class="tl-item open"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Global Lead Sanctions & Embargoes — Integration</div><div class="tl-org">Ayvens / LeasePlan (Société Générale) <span class="tl-loc">— Amsterdam</span></div></div><span class="tl-period">Oct 2023 – Dec 2024</span></div><p class="tl-ctx">Project Lead and single point of authority for the end-to-end integration of the Société Générale sanctions and embargoes framework into the LeasePlan Group across all countries — a critical workstream in the M&A that led to the creation of Ayvens Group, the largest car leasing company in the world (Société Générale). Coordinating directly with the Global Head of Sanctions of Société Générale and participating in the Sanctions Integration Committee at group level. One of the key compliance players ensuring the newly formed entity met group and regulatory standards from day one.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><div class="tl-sub"><span class="d">◆</span><span class="st">Governance, Policy & Programme Management</span></div><ul><li><strong>Framework Integration:</strong> Led the full transposition of the Société Générale sanctions and embargoes framework into the LeasePlan Group — adapting group policies, standards, and operational procedures to local regulatory contexts across 30+ countries</li><li><strong>Sanctions Integration Committee:</strong> Active participant in the group-level Sanctions Integration Committee alongside the Global Head of Sanctions of Société Générale, contributing to strategic decision-making on integration priorities, timelines, and risk acceptance</li><li><strong>RACI & Committees:</strong> Adapted the RACI framework in line with the Société Générale Group; established global Compliance Committees; formalised LOD1/LOD2 roles and responsibilities for sanctions compliance across all entities</li><li><strong>ExCo Reporting:</strong> Strategic advisory and periodic FCC reporting to Senior and Executive Management / Board level on sanctions integration progress, risk exposure, and remediation status</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Screening, Tooling & System Adaptation</span></div><ul><li><strong>Employee Screening:</strong> Designed and implemented HR/employee screening processes across the entire LeasePlan Group, integrating sanctions checks into onboarding, periodic reviews, and event-driven triggers</li><li><strong>Client & Supplier Screening:</strong> Integrated client and supplier screening workflows across all entities, aligning filtering logic with Société Générale group standards</li><li><strong>System Adaptation & Tooling:</strong> Coordinated the adaptation of screening systems and tooling to accommodate group requirements — including scenario configuration, matching logic, and system integration across multiple platforms and jurisdictions</li><li><strong>Calibration & Threshold Setting:</strong> Defined filtering parameters, thresholds, and false-positive handling methodology tailored to entity-specific risk profiles and transaction volumes</li><li><strong>Alert Handling & Escalation:</strong> Established end-to-end alert handling protocols — triage, investigation, escalation pathways, and resolution procedures — with clear escalation routes to group-level sanctions functions</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Risk Assessment & Dispensation</span></div><ul><li><strong>Sanctions & Embargoes Risk Assessment:</strong> Led the implementation of the group sanctions and embargoes risk assessment framework across LeasePlan — conducting capacity assessments per entity and embedding sanctions risk into the broader organisational risk taxonomy</li><li><strong>Group Risk Assessment Integration:</strong> Coordinated the integration of sanctions-specific risk assessments into the group-wide risk assessment framework, ensuring consistency with Société Générale's risk appetite and methodology</li><li><strong>Dispensation Process:</strong> Implemented the group dispensation process for sanctions-related matters — defining the governance, approval workflows, and documentation requirements for derogations and exceptions across jurisdictions</li><li><strong>Voluntary Disclosure:</strong> Established the voluntary disclosure framework and process for sanctions-related incidents, ensuring timely and structured self-reporting to relevant authorities where required</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Controls, KYC & Incident Management</span></div><ul><li><strong>Controls & KRIs:</strong> Designed sanctions-specific controls, KRI thresholds, and dashboards for ongoing monitoring and management reporting</li><li><strong>KYC Integration:</strong> Embedded sanctions screening requirements into the KYC lifecycle — onboarding, periodic reviews, and event-driven reassessments</li><li><strong>Incidents & Asset Freeze:</strong> Managed incident handling including US person recusal protocols; licensing procedures under EU, US, and local sanctions regimes; and the asset freeze notification and reporting framework</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Regulatory Watchtower & Training</span></div><ul><li><strong>Regulatory Watchtower:</strong> Maintained systematic monitoring of sanctions developments across all relevant regimes; structured reporting to regulators and group compliance</li><li><strong>Training & Rollout:</strong> Developed and delivered per-jurisdiction sanctions training programmes; managed the end-to-end rollout lifecycle of the integrated framework across 30+ countries</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Group Compliance Officer (Consultant) — FCC</div><div class="tl-org">LeasePlan (Société Générale Group) <span class="tl-loc">— Amsterdam Zuidas</span></div></div><span class="tl-period">Aug 2022 – Sep 2023</span></div><p class="tl-ctx">Hired as one of the key compliance specialists to support the LeasePlan–ALD merger under Société Générale — the integration that ultimately led to the creation of Ayvens Group, the largest car leasing company in the world. Leveraged deep AML/CFT and sanctions expertise to build the compliance architecture for the newly combined entity. First point of contact for the global LOD1 project team.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><div class="tl-sub"><span class="d">◆</span><span class="st">Merger Preparation & FCC Expertise</span></div><ul><li><strong>Integration Steering:</strong> Applied specialised FCC knowledge to steer the LeasePlan–ALD integration, improving processes for smoother consolidation and clearer compliance oversight</li><li><strong>Policies & Standards:</strong> Drafted and refined group-wide AML/CFT and Sanctions policies, ensuring a unified approach across all entities — including the articulation of Transaction Monitoring requirements and enhancements aligned with EBA Guidelines (EBA/GL/2021/02) and DNB supervisory expectations for robust TM frameworks</li><li><strong>ECB / EBA / Wwft Gap Analysis:</strong> Conducted comprehensive gap analysis incorporating ECB expectations, EBA Guidelines, and Wwft alignment requirements</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Risk Management & Controls</span></div><ul><li><strong>Risk Appetite & SIRA:</strong> Helped define the Risk Appetite Statement and guided the Systematic Integrity Risk Assessment (SIRA) to reinforce the organisation's defences</li><li><strong>Transaction Monitoring — Global Strategy:</strong> Defined and established the overall Transaction Monitoring strategy for LeasePlan at group level — setting the strategic direction for TM scope, risk-based monitoring approach, business rule framework, scenario methodology, alert handling governance, and quality assurance standards across all entities, aligned with EBA Guidelines and DNB supervisory expectations. Laid the foundation that is now being executed operationally at Ayvens Bank</li><li><strong>Three Lines of Defence:</strong> Maintained and strengthened the LOD model, streamlining accountability and supervisory clarity</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Training, Advisory & Oversight</span></div><ul><li><strong>Global Learning Framework:</strong> Drafted a comprehensive framework encompassing trainings, onboarding, refresher courses, and localised programmes — empowering compliance officers to meet evolving regulatory requirements</li><li><strong>Regulatory Tracking:</strong> Monitored changes in AML/CFT and EBA guidelines, conducting impact assessments for proactive compliance and maintaining the regulatory watchtower</li><li><strong>Country Visits & Advisory:</strong> Conducted on-site LeasePlan country visits providing advisory, escalation support, and FIU reporting oversight across jurisdictions</li></ul><div class="tl-sub"><span class="d">◆</span><span class="st">Reporting & Culture</span></div><ul><li><strong>ExCo Reporting:</strong> Delivered quarterly FCC reporting to Executive Committee; provided strategic advice on FCC matters to senior leadership</li><li><strong>Continuous Improvement:</strong> Collected feedback from local compliance officers, systematically refining training and policies while fostering a proactive compliance culture to adapt to emerging risks</li></ul><p class="tl-closing">By combining consulting acumen with deep subject matter expertise, I fortified LeasePlan's compliance posture — ensuring a forward-looking framework that minimised risks amid a pivotal merger.</p></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Lead Learning & Development — FEC (CDD/KYC)</div><div class="tl-org">FMO — Dutch Entrepreneurial Development Bank <span class="tl-loc">— The Hague</span></div></div><span class="tl-period">Oct 2021 – Dec 2024</span></div><p class="tl-ctx">Led the Learning & Development function for Financial Economic Crime, designing and implementing a targeted training framework to ensure FEC guidelines were seamlessly integrated into daily operations across the organisation.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>L&D Programme from Scratch:</strong> Designed and delivered FMO's comprehensive KYC Essentials programme — a multi-tiered curriculum combining self-study modules, interactive workshops, and case-based learning with progressive development paths</li><li><strong>Training Framework & Job Curricula:</strong> Created targeted training frameworks complete with job curricula and structured onboarding programmes, ensuring consistent application of FEC guidelines from day one</li><li><strong>Ad-Hoc Remediation Training:</strong> Steered the creation of an ad-hoc training framework to effectively finalise the remediation project, embedding best practices into day-to-day workflows</li><li><strong>Continuous Professional Development:</strong> Provided ongoing development ensuring FEC standards remained ingrained in operational routines across all departments</li><li><strong>Regulator Recognition (DNB):</strong> Received positive feedback from the Dutch National Bank on the strategic impact and quality of the learning programmes</li><li><strong>AML/CTF Standards Update:</strong> Updated FMO's AML/CTF standards for alignment with FATF recommendations and DNB supervisory expectations</li></ul><p class="tl-closing">Introduced sustainable learning practices that reinforced FEC principles organisation-wide and drove long-term KYC team development at FMO.</p></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Subject Matter Expert — Financial Economic Crime (a.i.)</div><div class="tl-org">FMO — Dutch Entrepreneurial Development Bank <span class="tl-loc">— The Hague</span></div></div><span class="tl-period">Feb 2021 – Jan 2022</span></div><p class="tl-ctx">Served as the Subject Matter Expert for FEC during a critical remediation phase, enhancing the quality assurance of compliance files and practices across the organisation.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Quality Assurance & Remediation:</strong> Oversaw file-quality improvements and compliance initiatives during the remediation phase, delivering notable enhancements in file accuracy and review standards</li><li><strong>Analyst Mentoring:</strong> Mentored analysts on investigative and analytical skills, refining their capabilities and leading to measurable improvements in compliance file quality</li><li><strong>Process Redesign:</strong> Redesigned core compliance processes, embedding best practices and FEC awareness into day-to-day operational workflows</li><li><strong>Career Growth Paths:</strong> Created comprehensive growth paths for KYC analysts, defining job curricula, competency requirements, and clear progression routes within the department</li><li><strong>Onboarding Programme:</strong> Established a structured onboarding programme to streamline new hires' integration and ensure consistent application of FEC guidelines from the outset</li></ul><p class="tl-closing">Elevated compliance quality and file review processes organisation-wide, laying the groundwork for sustainable learning practices that reinforced FEC principles across FMO.</p></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Global KYC Expert — CDD Pillar</div><div class="tl-org">ING — Global CDD Expertise Center <span class="tl-loc">— Amsterdam</span></div></div><span class="tl-period">Feb 2020 – Feb 2021</span></div><p class="tl-ctx">Played a pivotal role within the Global CDD Expertise Center in defining the compliance framework and setting global KYC standards across the entire ING organisation.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Global KYC Authority:</strong> Part of the CDD Pillar establishing the Global KYC Authority at ING, setting the baseline for implementing new global standards and the KYC system — specifically focusing on content integration from a PEGA system perspective</li><li><strong>Cross-Sector Standards:</strong> Established KYC benchmarks spanning Retail, SME, Wholesale, Private Banking, and Mid-Corporate sectors, ensuring uniform implementation across all regions and service lines</li><li><strong>Architectural Design & Execution:</strong> Oversaw the architectural design and execution of KYC processes to ensure consistent application across ING's global footprint</li><li><strong>Regulatory Engagement:</strong> Led strategic initiatives and liaised with global regulators to promote and integrate systemic compliance enhancements throughout the organisation</li><li><strong>Global Quality Assurance:</strong> Served as Subject Matter Expert for Global QA, maintaining rigorous oversight across defence lines and developing comprehensive FEC guidelines tailored to varying banking practices</li><li><strong>FEC Guidelines Development:</strong> Developed Financial Economic Crime guidelines adapted to ING's diverse banking operations, ensuring relevance across jurisdictions and client segments</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Advisor & Trainer — KYC/CTF/AML/Sanctions</div><div class="tl-org">Rabobank Group — Wholesale Banking <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Dec 2018 – Jan 2020</span></div><p class="tl-ctx">Operated in an advisory capacity within the KYC, business, and compliance teams — guiding subject matter experts and senior management on complex AML/CFT/Sanctions matters and supporting the strategic direction of the KYC department.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Strategic Advisory:</strong> Provided strategic guidance on AML/CFT/Sanctions to senior management, playing a key role in shaping the strategic direction of the KYC Wholesale department</li><li><strong>Training & Development Leadership:</strong> Designed and implemented global training frameworks and educational programmes for the KYC Wholesale department, ensuring consistent delivery of high-calibre learning experiences</li><li><strong>Transaction Monitoring — Scenario Enhancement:</strong> Participated in Rabobank's bank-wide transaction monitoring scenario enhancement project, contributing to the review and refinement of TM business rules, detection scenarios, and threshold calibrations to improve alert quality and strengthen regulatory alignment</li><li><strong>Analyst Skills Enhancement:</strong> Enhanced the skills of KYC analysts, FLM Specialists, and operational teams through systematic training and process improvements</li><li><strong>External Ventures & Innovation:</strong> Managed external ventures including outsourcing, consultancy services, and interbank collaborations — creating innovative proof of concepts showcasing compliance leadership</li><li><strong>Board-Level Communication:</strong> Facilitated the effective dissemination of complex compliance information to diverse audiences, from the bank's board to operational staff</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Change Management Lead — Compliance Training & Policy</div><div class="tl-org">Rabobank Group — Wholesale Banking <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Jul 2018 – Jan 2019</span></div><p class="tl-ctx">At the KYC Expertise Centre, led transformative initiatives that enhanced the department's capabilities through more efficient processes and innovative talent development.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Green House Programme:</strong> Proposed and initiated the innovative Green House Programme — aimed at recruiting and training groups of recently graduated individuals with less than one year of experience. Directly moulded these recruits through targeted, foundational training closely aligned with strategic goals, resulting in them becoming some of the best performers at the KYC Centre</li><li><strong>Hanze Hogeschool Collaboration:</strong> Set up a collaboration with Hanze University of Applied Sciences Groningen to train people and help create a minor programme inspiring students to work in the CDD field</li><li><strong>Wholesale Training Framework:</strong> Designed the Rabobank Wholesale training framework, seamlessly blending policy translation with content creation to develop a unified compliance narrative adopted by other entities within the group</li><li><strong>Cultural Enhancement:</strong> Fostered a culture of due diligence, risk management, and continuous learning — markedly enhancing the bank's international compliance stature</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Compliance/KYC SME</div><div class="tl-org">Rabobank Group — Wholesale Banking <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Nov 2017 – Aug 2018</span></div><p class="tl-ctx">Subject Matter Expert and Trainer within the KYC department and Front Office relationship managers, providing comprehensive guidance on Compliance, AML, Sanctions, CFT, Tax Structures, and Regulatory Reporting.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Training Framework Setup:</strong> Led the setup of the training framework for the KYC Wholesale department, enhancing analyst proficiency and operational effectiveness across the organisation</li><li><strong>SIRA Execution:</strong> Conducted the Systematic Integrity Risk Assessment (SIRA) exercise for the Wholesale department and oversaw the follow-up actions to ensure adherence to compliance standards</li><li><strong>Policy Development:</strong> As a member of the first line, provided valuable input into policy development, aligning practices with global compliance standards including FATCA and CRS requirements</li><li><strong>Global CDD Integration:</strong> Facilitated the integration of global CDD standards and operational models, improving client onboarding processes across the bank</li><li><strong>Management Presentations:</strong> Delivered impactful Compliance and FEC presentations to management, playing a critical role in recruiting new talent and nurturing a culture of continuous learning</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Compliance QA Specialist & Trainer</div><div class="tl-org">Rabobank Group — Wholesale Banking <span class="tl-loc">— Zeist / Utrecht</span></div></div><span class="tl-period">Dec 2016 – Jan 2018</span></div><p class="tl-ctx">Led quality assessment and reviews of KYC files to ensure adherence to both internal policy standards and applicable regulatory processes.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Quality Assurance Leadership:</strong> Managed rigorous audits and analytical reviews across various branches, conducting representative sample checks to ensure uniformity and accuracy in compliance efforts</li><li><strong>QA Reporting & Benchmarks:</strong> Provided decisive Quality Assurance reports and findings both on an overall and individual analyst basis, establishing quality benchmarks for the department</li><li><strong>Analyst Coaching:</strong> Guided analysts through the KYC/CDD review process, developing and implementing personalised coaching and training programmes to enhance their capabilities</li><li><strong>QA Framework Design:</strong> Instrumental in designing and implementing the Quality Assurance Framework, which laid the foundation for the exponential growth of the KYC department</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Senior Compliance Analyst — KYC/AML/CFT/Sanctions</div><div class="tl-org">Rabobank Group — Wholesale Banking <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Oct 2015 – Mar 2017</span></div><p class="tl-ctx">Joined during a critical period of remediation, rapidly advancing from KYC Analyst to a senior role managing high-risk customer profiles.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>CDD Assessment — High-Risk Clients:</strong> Performed Customer Due Diligence assessments on high-risk clients of Rabobank Wholesale as part of the remediation project, ensuring compliance and mitigating risk exposure</li><li><strong>KYC Process Enhancement:</strong> Actively participated in significant organisational projects — from task forces to policy updates — enhancing the bank's due diligence processes and overall compliance framework</li><li><strong>FEC Awareness Integration:</strong> Played a crucial role in embedding core compliance principles, enhancing customer engagement, and raising Financial Economic Crime awareness into daily operations</li><li><strong>Department Scaling:</strong> Involved in various projects to help build the new KYC organisation, contributing to its growth from a handful of employees to over 125 FTEs</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Derivatives Contracts & Regulatory Reporting Officer</div><div class="tl-org">Rabobank Group — Financial Markets <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Sep 2012 – Oct 2015</span></div><p class="tl-ctx">Oversaw the comprehensive management of derivative contracts, ensuring meticulous integration and compliance with internal policies and international market standards.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Contract Lifecycle Management:</strong> Managed the full lifecycle of derivative contracts, ensuring precise crafting and execution of confirmation contracts while upholding the organisation's high standards for service excellence</li><li><strong>DTCC Oversight:</strong> Ensured stringent oversight of derivative transactions reported to the Depository Trust & Clearing Corporation (DTCC), maintaining accuracy and consistency of trade data through meticulous reconciliation</li><li><strong>Regulatory Reporting:</strong> Proactively implemented regulatory reporting mechanisms to adhere to major international frameworks including EMIR, the Dodd-Frank Act (DFA), and HKMA standards</li><li><strong>Client Communication:</strong> Maintained open and clear communication with clients on contract matters, reflecting the organisation's dedication to service excellence</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Financial Controller — Financial Markets</div><div class="tl-org">Rabobank Group <span class="tl-loc">— Utrecht</span></div></div><span class="tl-period">Feb 2011 – Oct 2012</span></div><p class="tl-ctx">Ensured precision in financial reporting across a broad range of financial instruments and markets within the Financial Markets division.</p><div class="tl-toggle" onclick="toggle(this)"><span>Details</span><svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></div><div class="tl-body"><ul><li><strong>Financial Reconciliation:</strong> Conducted meticulous monthly reconciliations and audited weekly and monthly financial figures to guarantee the highest standards of financial compliance and transparency</li><li><strong>DNB Regulatory Submissions:</strong> Compiled and prepared financial data for regulatory submissions, ensuring strict adherence to Dutch National Bank (DNB) guidelines and other regulatory frameworks</li><li><strong>Bonds & Repos Specialisation:</strong> Focused on the reconciliation of Bonds & Repos transactions, reinforcing robust financial controls and identifying discrepancies to ensure financial soundness</li></ul></div></div>
+
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-head" onclick="toggle(this)"><div><div class="tl-title">Marketing Advisor</div><div class="tl-org">KPN <span class="tl-loc">— Schiphol</span></div></div><span class="tl-period">Jan 2007 – Jul 2009</span></div><p class="tl-ctx">Marketing advisory for KPN at Schiphol Airport, developing commercial strategies and customer engagement initiatives for one of the Netherlands' largest telecommunications providers.</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EXPERTISE (DARK) -->
+<section class="exp-dark" id="expertise">
+  <div class="sec sr" style="padding-top:64px;padding-bottom:64px">
+    <div class="sec-head"><span class="sec-num" style="color:rgba(255,255,255,.2)">03</span><h2 class="sec-title dark">Distinctive Competencies</h2><div class="sec-line"></div></div>
+    <div class="radar-wrap">
+      <div class="radar-chart"><canvas id="radarCanvas" width="300" height="300"></canvas></div>
+      <div class="radar-labels">
+        <div class="radar-col"><h4>Regulatory & Frameworks</h4><div><span class="radar-tag">EU AMLR</span><span class="radar-tag">Dutch Wwft</span><span class="radar-tag">Sanctions Act</span><span class="radar-tag">FATF/DNB</span><span class="radar-tag">SIRA</span><span class="radar-tag">EMIR/DFA</span><span class="radar-tag">FATCA/CRS</span><span class="radar-tag">EBA Guidelines</span><span class="radar-tag">3 Lines of Defence</span><span class="radar-tag">PEP Classification</span></div></div>
+        <div class="radar-col"><h4>Operational Excellence</h4><div><span class="radar-tag">TM Design</span><span class="radar-tag">Sanctions Screening</span><span class="radar-tag">KYC/CDD Architecture</span><span class="radar-tag">Control Framework</span><span class="radar-tag">QA Frameworks</span><span class="radar-tag">KRI Design</span><span class="radar-tag">Gap Analysis</span><span class="radar-tag">PEGA Integration</span><span class="radar-tag">Incident Mgmt</span></div></div>
+        <div class="radar-col"><h4>Leadership & Impact</h4><div><span class="radar-tag">M&A Integration</span><span class="radar-tag">ExCo Advisory</span><span class="radar-tag">L&D Design</span><span class="radar-tag">Dept Scaling</span><span class="radar-tag">Stakeholder Mgmt</span><span class="radar-tag">Regulatory Engagement</span><span class="radar-tag">Culture Building</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION (WHITE) -->
+<section class="edu-sec" id="education">
+  <div class="sec sr">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title light">Education, Certifications & Languages</h2><div class="sec-line"></div></div>
+    <div class="edu-grid">
+      <div class="edu-card"><h4>Education</h4><div class="edu-item"><div class="nm">BA International Business & Management</div><div class="dt">Amsterdam University of Applied Sciences (2007–2017)</div></div><div class="edu-item"><div class="nm">Exchange — University of Miami</div><div class="dt">Business Admin, Investment, Security Markets, US Corp Law (2009–2010)</div></div></div>
+      <div class="edu-card"><h4>Certifications</h4><div class="edu-item"><div class="nm">Certified Compliance Professional</div><div class="dt">NCI (Dec 2024 – Nov 2026)</div></div><div class="edu-item"><div class="nm">CIPP/E — GDPR/AVG Privacy</div><div class="dt">IAPP (2019–2020)</div></div><div class="edu-item"><div class="nm">Lean Yellow Belt</div><div class="dt">(2018–2020)</div></div><div class="edu-item"><div class="nm">ACAMS Certification</div><div class="dt">(Apr 2026 – Jun 2026)</div></div></div>
+      <div class="edu-card"><h4>Languages</h4><div class="edu-item"><div class="nm">Dutch — Native / Bilingual</div></div><div class="edu-item"><div class="nm">English — Native / Bilingual</div></div><div class="edu-item"><div class="nm">Spanish — Elementary</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA (DARK) -->
+<div class="cta-strip">
+  <h2 class="cta-title">Ready to Strengthen Your Compliance Framework?</h2>
+  <p class="cta-sub">AML/CFT · Sanctions · KYC/CDD · EU AMLR Transition · Executive Advisory</p>
+  <div class="cta-btns">
+    <a href="mailto:info@compliancedevelopmentconsultancy.com" class="btn-gold"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><span>Get in Touch</span></a>
+    <a href="https://www.linkedin.com/in/zack-e-a9a16717" target="_blank" class="btn-ghost"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>Connect on LinkedIn</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-social">
+    <a href="mailto:info@compliancedevelopmentconsultancy.com"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+    <a href="https://www.linkedin.com/in/zack-e-a9a16717" target="_blank"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+    <a href="tel:+31634039890"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+  </div>
+  <p>© 2025 Z.E. Compliance Development & Consultancy · The Randstad, Netherlands</p>
+</footer>
+
+<div class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+  <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/></svg>
+  <span id="themeLabel">Light Mode</span>
+</div>
+
+<button class="btt" id="btt"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></button>
+
 <script>
-!function(){const c=document.getElementById('bg'),x=c.getContext('2d');let W,H,pts=[];function sz(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}sz();window.addEventListener('resize',sz);class P{constructor(){this.r()}r(){this.x=Math.random()*W;this.y=Math.random()*H;this.s=Math.random()*1.8+.5;this.vx=(Math.random()-.5)*.25;this.vy=(Math.random()-.5)*.25;this.a=Math.random()*.35+.08}u(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.r()}d(){x.beginPath();x.arc(this.x,this.y,this.s,0,Math.PI*2);x.fillStyle='rgba(201,168,76,'+this.a+')';x.fill()}}for(let i=0;i<60;i++)pts.push(new P);!function l(){x.clearRect(0,0,W,H);pts.forEach(p=>{p.u();p.d()});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<130){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(201,168,76,'+(0.06*(1-d/130))+')';x.lineWidth=.5;x.stroke()}}requestAnimationFrame(l)}()}();
+/* ═══ PARTICLES ═══ */
+!function(){const c=document.getElementById('particles'),x=c.getContext('2d');let W,H,pts=[];function sz(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}sz();window.addEventListener('resize',sz);class P{constructor(){this.r()}r(){this.x=Math.random()*W;this.y=Math.random()*H;this.s=Math.random()*2+.5;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.a=Math.random()*.4+.1}u(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.r()}d(){x.beginPath();x.arc(this.x,this.y,this.s,0,Math.PI*2);x.fillStyle='rgba(201,168,76,'+this.a+')';x.fill()}}for(let i=0;i<80;i++)pts.push(new P);!function l(){x.clearRect(0,0,W,H);pts.forEach(p=>{p.u();p.d()});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<140){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(201,168,76,'+(0.07*(1-d/140))+')';x.lineWidth=0.6;x.stroke()}}requestAnimationFrame(l)}()}();
 
-var codeInput=document.getElementById('code');
-var loginBtn=document.getElementById('loginBtn');
-var errorEl=document.getElementById('error');
-var card=document.getElementById('card');
+/* ═══ 3D TILT ═══ */
+document.querySelectorAll('.ach-card').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+px*7+'deg) rotateX('+(-py*7)+'deg) scale(1.02)';c.style.setProperty('--mx',(e.clientX-r.left)/r.width*100+'%');c.style.setProperty('--my',(e.clientY-r.top)/r.height*100+'%')});c.addEventListener('mouseleave',()=>{c.style.transform=''})});
 
-function doLogin(){
-  var val=codeInput.value.trim().toLowerCase();
-  if(val==='rabobank'){
-    errorEl.textContent='';
-    codeInput.classList.remove('err');
-    card.classList.add('leaving');
-    setTimeout(function(){
-      window.location.assign('cv.html');
-    },450);
+/* ═══ TOGGLE ═══ */
+function toggle(el){el.closest('.tl-item').classList.toggle('open')}
+
+/* ═══ METRIC RINGS ═══ */
+const rO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.style.setProperty('--off',163-163*e.target.dataset.pct/100);e.target.classList.add('anim');rO.unobserve(e.target)}})},{threshold:.4});document.querySelectorAll('.met-ring').forEach(r=>rO.observe(r));
+
+/* ═══ COUNTER ANIMATION ═══ */
+const cO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.count,d=1500;let s=performance.now();!function a(n){const p=Math.min((n-s)/d,1),v=Math.round(p*t);e.target.textContent=v+(t>=30?'+':'');if(p<1)requestAnimationFrame(a)}(s);cO.unobserve(e.target)}})},{threshold:.5});document.querySelectorAll('[data-count]').forEach(c=>cO.observe(c));
+
+/* ═══ RADAR ═══ */
+!function(){const cv=document.getElementById('radarCanvas');if(!cv)return;const c=cv.getContext('2d'),cx=150,cy=150,R=110;const L=['Regulatory','Screening','Governance','Training','Risk Mgmt','Global Ops'],V=[.92,.88,.95,.85,.9,.93];for(let l=1;l<=4;l++){c.beginPath();const r=R*l/4;for(let i=0;i<=6;i++){const a=Math.PI*2*i/6-Math.PI/2;i?c.lineTo(cx+r*Math.cos(a),cy+r*Math.sin(a)):c.moveTo(cx+r*Math.cos(a),cy+r*Math.sin(a))}c.strokeStyle='rgba(201,168,76,0.07)';c.stroke()}for(let i=0;i<6;i++){const a=Math.PI*2*i/6-Math.PI/2;c.beginPath();c.moveTo(cx,cy);c.lineTo(cx+R*Math.cos(a),cy+R*Math.sin(a));c.strokeStyle='rgba(201,168,76,0.05)';c.stroke()}c.beginPath();for(let i=0;i<=6;i++){const k=i%6,a=Math.PI*2*k/6-Math.PI/2,r=R*V[k];i?c.lineTo(cx+r*Math.cos(a),cy+r*Math.sin(a)):c.moveTo(cx+r*Math.cos(a),cy+r*Math.sin(a))}const g=c.createLinearGradient(cx-R,cy-R,cx+R,cy+R);g.addColorStop(0,'rgba(201,168,76,0.18)');g.addColorStop(1,'rgba(201,168,76,0.06)');c.fillStyle=g;c.fill();c.strokeStyle='rgba(201,168,76,0.5)';c.lineWidth=2;c.stroke();for(let i=0;i<6;i++){const a=Math.PI*2*i/6-Math.PI/2,r=R*V[i];c.beginPath();c.arc(cx+r*Math.cos(a),cy+r*Math.sin(a),4,0,Math.PI*2);c.fillStyle='#C9A84C';c.fill();c.beginPath();c.arc(cx+r*Math.cos(a),cy+r*Math.sin(a),7,0,Math.PI*2);c.strokeStyle='rgba(201,168,76,0.18)';c.lineWidth=1;c.stroke();const lx=cx+(R+22)*Math.cos(a),ly=cy+(R+22)*Math.sin(a);c.font='300 10px Outfit,sans-serif';c.fillStyle='rgba(255,255,255,0.4)';c.textAlign='center';c.textBaseline='middle';c.fillText(L[i],lx,ly)}}();
+
+/* ═══ SCROLL ═══ */
+const btt=document.getElementById('btt'),bar=document.getElementById('progressBar'),nav=document.getElementById('mainNav');
+const sids=['education','expertise','experience','achievements','top'];
+window.addEventListener('scroll',()=>{const y=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(y/h*100)+'%';btt.classList.toggle('show',y>500);nav.classList.toggle('vis',y>300);document.querySelectorAll('.nav a[data-s]').forEach(a=>a.classList.remove('active'));for(const id of sids){const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<220){const a=nav.querySelector('[data-s="'+id+'"]');if(a)a.classList.add('active');break}}},{passive:true});
+
+/* ═══ REVEAL ═══ */
+document.querySelectorAll('.sr').forEach(el=>el.classList.add('pend'));
+const sO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');e.target.classList.remove('pend');sO.unobserve(e.target)}})},{threshold:.06});
+document.querySelectorAll('.sr').forEach(el=>sO.observe(el));
+setTimeout(()=>{document.querySelectorAll('.sr').forEach(el=>{el.classList.add('vis');el.classList.remove('pend')})},100);
+
+/* ═══ THEME TOGGLE ═══ */
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  const isLight=document.body.classList.contains('light');
+  localStorage.setItem('cvTheme',isLight?'light':'dark');
+  updateToggleUI(isLight);
+}
+function updateToggleUI(isLight){
+  const icon=document.getElementById('themeIcon');
+  const label=document.getElementById('themeLabel');
+  if(isLight){
+    icon.innerHTML='<path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>';
+    label.textContent='Dark Mode';
   } else {
-    errorEl.textContent='Invalid access code. Please try again.';
-    codeInput.classList.add('err');
-    setTimeout(function(){
-      errorEl.textContent='';
-      codeInput.classList.remove('err');
-    },2500);
+    icon.innerHTML='<path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>';
+    label.textContent='Light Mode';
   }
 }
-
-loginBtn.addEventListener('click',doLogin);
-codeInput.addEventListener('keydown',function(e){
-  if(e.key==='Enter'){
-    e.preventDefault();
-    doLogin();
-  }
-});
+// Check saved theme or URL param
+!function(){
+  const params=new URLSearchParams(window.location.search);
+  const urlTheme=params.get('theme');
+  const saved=localStorage.getItem('cvTheme');
+  const theme=urlTheme||saved||'dark';
+  if(theme==='light'){document.body.classList.add('light');updateToggleUI(true)}
+}();
 </script>
 </body>
 </html>
