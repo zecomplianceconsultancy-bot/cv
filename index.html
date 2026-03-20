@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zack ElMoussaoui — Confidential Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0B1D3A;--deep:#060F1F;--gold:#C9A84C;--gold-l:#E8D9A0;--fd:'Playfair Display',Georgia,serif;--fb:'Outfit',-apple-system,sans-serif}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--deep);font-family:var(--fb);overflow:hidden;position:relative}
+canvas#bg{position:fixed;inset:0;z-index:0}
+.orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0}
+.orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 65%);top:-100px;right:-100px;animation:orb1 8s ease-in-out infinite}
+.orb-2{width:350px;height:350px;background:radial-gradient(circle,rgba(26,82,118,.08) 0%,transparent 65%);bottom:-50px;left:-50px;animation:orb2 10s ease-in-out infinite}
+.orb-3{width:200px;height:200px;background:radial-gradient(circle,rgba(201,168,76,.04) 0%,transparent 65%);top:40%;left:30%;animation:orb1 12s ease-in-out infinite reverse}
+@keyframes orb1{0%,100%{opacity:.4;transform:scale(1) translate(0,0)}50%{opacity:1;transform:scale(1.2) translate(20px,-15px)}}
+@keyframes orb2{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:.8;transform:scale(1.15) translate(-10px,10px)}}
+.grid-bg{position:fixed;inset:0;z-index:0;background-image:linear-gradient(rgba(201,168,76,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.015) 1px,transparent 1px);background-size:60px 60px}
+.login-card{position:relative;z-index:10;width:420px;max-width:92vw;padding:48px 40px;background:rgba(11,29,58,.65);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:1px solid rgba(201,168,76,.08);border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.02);animation:cardIn .8s cubic-bezier(.22,1,.36,1) forwards;opacity:0;transform:translateY(30px);transition:all .4s ease}
+@keyframes cardIn{to{opacity:1;transform:none}}
+.login-card.leaving{opacity:0!important;transform:scale(.95)!important}
+.mono{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#b8963f);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;position:relative;box-shadow:0 8px 32px rgba(201,168,76,.2)}
+.mono::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(201,168,76,.15);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.15);opacity:0}}
+.mono span{font:800 28px/1 var(--fd);color:var(--deep)}
+.card-title{font:700 22px/1.2 var(--fd);color:#fff;text-align:center;margin-bottom:4px}
+.card-role{font:300 11px/1.5 var(--fb);color:var(--gold);text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.2),transparent);margin-bottom:28px}
+.input-group{position:relative;margin-bottom:20px}
+.input-group label{font:500 9px/1 var(--fb);color:rgba(255,255,255,.25);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:8px}
+.input-group input{width:100%;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.1);border-radius:12px;color:#fff;font:400 14px/1 var(--fb);outline:none;transition:all .3s}
+.input-group input::placeholder{color:rgba(255,255,255,.15);font-weight:300}
+.input-group input:focus{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.04);box-shadow:0 0 0 3px rgba(201,168,76,.06)}
+.input-group input.err{border-color:rgba(231,76,60,.4)!important}
+.btn-enter{width:100%;padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b8963f);color:var(--deep);font:600 12px/1 var(--fb);letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden;margin-top:8px}
+.btn-enter::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 48%,transparent 56%);background-size:280%;animation:shine 4s ease infinite}
+@keyframes shine{0%{background-position:280%}100%{background-position:-280%}}
+.btn-enter:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,168,76,.3)}
+.error-msg{font:400 11px/1 var(--fb);color:#e74c3c;text-align:center;margin-top:12px;height:16px}
+.card-footer{text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid rgba(201,168,76,.06)}
+.card-footer p{font:300 9px/1.4 var(--fb);color:rgba(255,255,255,.15);letter-spacing:1.5px;text-transform:uppercase}
+.lock{display:inline-flex;align-items:center;gap:6px;font:400 10px/1 var(--fb);color:rgba(201,168,76,.4);margin-bottom:8px}
+.lock svg{width:12px;height:12px;fill:currentColor}
+@media(max-width:480px){.login-card{padding:36px 24px}.card-title{font-size:20px}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="login-card" id="card">
+  <div class="mono"><span>Z</span></div>
+  <h1 class="card-title">Zack ElMoussaoui</h1>
+  <p class="card-role">Confidential Executive Profile</p>
+  <div class="divider"></div>
+  <div class="input-group">
+    <label>Access Code</label>
+    <input type="password" id="code" placeholder="Enter access code" autocomplete="off" autofocus>
+  </div>
+  <button class="btn-enter" id="loginBtn">Access Profile</button>
+  <div class="error-msg" id="error"></div>
+  <div class="card-footer">
+    <div class="lock"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>Encrypted &amp; Confidential</div>
+    <p>Z.E. Compliance Development &amp; Consultancy</p>
+    <p style="margin-top:4px">The Randstad, Netherlands</p>
+  </div>
+</div>
+
+<script>
+!function(){const c=document.getElementById('bg'),x=c.getContext('2d');let W,H,pts=[];function sz(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}sz();window.addEventListener('resize',sz);class P{constructor(){this.r()}r(){this.x=Math.random()*W;this.y=Math.random()*H;this.s=Math.random()*1.8+.5;this.vx=(Math.random()-.5)*.25;this.vy=(Math.random()-.5)*.25;this.a=Math.random()*.35+.08}u(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>W||this.y<0||this.y>H)this.r()}d(){x.beginPath();x.arc(this.x,this.y,this.s,0,Math.PI*2);x.fillStyle='rgba(201,168,76,'+this.a+')';x.fill()}}for(let i=0;i<60;i++)pts.push(new P);!function l(){x.clearRect(0,0,W,H);pts.forEach(p=>{p.u();p.d()});for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<130){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle='rgba(201,168,76,'+(0.06*(1-d/130))+')';x.lineWidth=.5;x.stroke()}}requestAnimationFrame(l)}()}();
+
+var codeInput=document.getElementById('code');
+var loginBtn=document.getElementById('loginBtn');
+var errorEl=document.getElementById('error');
+var card=document.getElementById('card');
+
+function doLogin(){
+  var val=codeInput.value.trim().toLowerCase();
+  if(val==='rabobank'){
+    errorEl.textContent='';
+    codeInput.classList.remove('err');
+    card.classList.add('leaving');
+    setTimeout(function(){
+      window.location.assign('cv.html');
+    },450);
+  } else {
+    errorEl.textContent='Invalid access code. Please try again.';
+    codeInput.classList.add('err');
+    setTimeout(function(){
+      errorEl.textContent='';
+      codeInput.classList.remove('err');
+    },2500);
+  }
+}
+
+loginBtn.addEventListener('click',doLogin);
+codeInput.addEventListener('keydown',function(e){
+  if(e.key==='Enter'){
+    e.preventDefault();
+    doLogin();
+  }
+});
+</script>
+</body>
+</html>
